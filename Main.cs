@@ -9,27 +9,27 @@ public class Main : BepInEx.BaseUnityPlugin
     public const string VERSION = "0.1";
     #endregion
 
-    public static Main Plugin;
-
+    private ModLoader _modLoader = new ModLoader();
     public Main()
     {
-        
     }
+    #region Runtime
     internal void Awake()
     {
-
         Log.Initialize(Logger);
 
         Log.Message("Rob.One.Inventory Started");
 
-        Plugin = this;
+        _modLoader.LoadMods();
     }
 
     internal void OnDestroy()
     {
+        _modLoader.UnloadMods();
     }
 
     internal void Update()
     {
     }
+    #endregion
 }

@@ -332,6 +332,7 @@
     <Compile Include="Log.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="ModBase.cs" />
+    <Compile Include="ModLoader.cs" />
     <Compile Include="Mods\Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
